@@ -76,7 +76,7 @@ a{
     color: #fff;
     visibility: hidden;
     opacity: 0;
-    animation: show-content .15s linear forwards;
+    animation: show-content 0.15s linear forwards;
     animation-delay: 1.6s;
 
 }
@@ -247,10 +247,10 @@ a{
     background:#1f242d;
     
     transform: translateY(-100%);
-    animation: show-bars .5s easy-in-out forward;
-    animation-delay:calc(.1s * var(--i));
+    animation: show-bars .5s ease-in-out forward;
+    animation-delay: calc(.1s * var(--j));
 }
-@keyframes show-bars{
+@keyframes show-bars {
     100%{
         transform: translateY(0%);
     }
