@@ -55,6 +55,7 @@ body {
     font-weight: 500;
     color: #fff;
     transition: .5s;
+    text-decoration: none;
 }
 
 .navbar ul li:hover a,
