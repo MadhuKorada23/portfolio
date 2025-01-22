@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatibile" content="IE-edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>
+            Portfolio
+        </title>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="Styling/home.css">
+        <link rel="stylesheet" href="Styling/skills.css">
+        <link rel="stylesheet" href="Styling/services.css">
+        <link rel="stylesheet" href="Styling/projects.css">
+        <link rel="stylesheet" href="Styling/contact.css">
+        <link rel="stylesheet" href="Styling/footer.css">
+
+    </head>
+    <script>
+        // Show or hide the button based on scroll position
+        window.onscroll = function() {
+            const scrollBtn = document.getElementById("scrollToTopBtn");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollBtn.style.display = "flex"; // Show the button
+            } else {
+                scrollBtn.style.display = "none"; // Hide the button
+            }
+        };
+    
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+
+        // JavaScript to handle active navigation link
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".navbar ul li a");
+
+    // Function to remove active class from all links
+    function removeActiveClass() {
+        navLinks.forEach(link => link.parentElement.classList.remove("active"));
+    }
+
+    // Function to add active class to the current link
+    function addActiveClass(currentLink) {
+        currentLink.parentElement.classList.add("active");
+    }
+
+    // Detect the section currently in view
+    window.addEventListener("scroll", () => {
+        let currentSection = "";
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            
+            if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                currentSection = section.getAttribute("id");
+            }
+        });
+
+        // Loop through all links and add active class to the corresponding one
+        removeActiveClass();
+        const activeLink = document.querySelector(`.navbar ul li a[href="#${currentSection}"]`);
+        if (activeLink) {
+            addActiveClass(activeLink);
+        }
+    });
+});
+
+    </script>
+    
+
+    <body>
+        <!-- <nav class="navbar">
+            <a href="#" class="logo">Portfolio.</a>
+            <ul>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#services">Service</a></li>
+                <li><a href="#projects ">Projects</a></li>
+                <li><a href="#contact.html">Contact</a></li>
+            </ul>
+        </nav> -->
+        <nav class="navbar">
+            <a href="#" class="logo">Portfolio.</a>
+            <ul>
+                <li id="home-link"><a href="#home">Home</a></li>
+                <li id="about-link"><a href="#skills">Skills</a></li>
+                <li id="services-link"><a href="#services">Services</a></li>
+                <li id="project-link"><a href="#projects">Projects</a></li>
+                <li id="contact-link"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+
+        <div class="bars-animation">
+            <div class="bar" style="--j:6;"></div>
+            <div class="bar" style="--j:5;"></div>
+            <div class="bar" style="--j:4;"></div>
+            <div class="bar" style="--j:3;"></div>
+            <div class="bar" style="--j:2;"></div>
+            <div class="bar" style="--j:1;"></div>
+        </div>
+        <section id="home">
+        <section class="home">
+            <div class="home-info">
+                <h2>Hello,my name is</h2>
+                <h1>Madhu.</h1>
+                <h2>And I'm a 
+                    <span style="--i:4;" data-text="Web Developer">Web Developer</span>
+                    <span style="--i:3;" data-text="FreeLancer">FreeLancer</span>
+                    <span style="--i:2;" data-text="Designer">Designer</span>
+                    <span style="--i:1;" data-text="Content Creater">Content Creater</span>
+                    
+                </h2>
+                <p>I am a passionate and skilled web developer specializing in building advanced, responsive, and visually appealing user interfaces. With a strong foundation in React.js and front-end technologies, I excel in crafting dynamic web applications and portfolio websites that seamlessly showcase certifications, skills, projects, and more. My work emphasizes clarity, functionality, and user-centric design.
+
+                    Driven by a love for problem-solving and creativity, I aim to create digital experiences that leave a lasting impression. Let’s build something amazing together!</p>
+                    <div class="btn-sci">
+                        <a href="#" class="btn">Download CV</a>
+                        <div class="sci">
+                            <a href="https://github.com/MadhuKorada23"><i class='bx bxl-github'></i></a>
+                            <a href="https://www.linkedin.com/in/madhu-korada-2bab79287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class='bx bxl-linkedin' ></i></a>
+                            <a href="https://www.instagram.com/d_a_r_l_i_n_g_001/profilecard/?igsh=MTJrcjk2M3JhOTFxcQ=="><i class='bx bxl-instagram' ></i></a>
+                            <a href="https://x.com/MadhuKorad23?t=Z3wbDj8pxT0v78nTMGTDyQ&s=09"><i class='bx bxl-twitter'></i></a>
+                            <a href="https://www.facebook.com/share/qb2H9CpM7Qmaq9ED/"><i class='bx bxl-facebook' ></i></a>
+                            
+                            
+                        </div>
+                    </div>
+            </div>
+            <div class="home-img">
+                <div class="img-box">
+                    <div class="img-item">
+                        <img src="madhu.png" alt="">
+                    </div>
+                </div>
+            </div>
+                 
+        </section>
+    </section>
+        <section id="skills">
+            <h2>My Skills</h2>
+            <ul>
+                <li>
+                    HTML
+                    <div class="progress-bar">
+                        <span style="--width: 90%;"></span>
+                    </div>
+                </li>
+                <li>
+                    CSS
+                    <div class="progress-bar">
+                        <span style="--width: 85%;"></span>
+                    </div>
+                </li>
+                <li>
+                    JavaScript
+                    <div class="progress-bar">
+                        <span style="--width: 80%;"></span>
+                    </div>
+                </li>
+                <li>
+                    React.js
+                    <div class="progress-bar">
+                        <span style="--width: 75%;"></span>
+                    </div>
+                </li>
+                <li>
+                    Node.js
+                    <div class="progress-bar">
+                        <span style="--width: 70%;"></span>
+                    </div>
+                </li>
+                <li>
+                    MongoDB
+                    <div class="progress-bar">
+                        <span style="--width: 65%;"></span>
+                    </div>
+                </li>
+                <li>
+                    Git and GitHub
+                    <div class="progress-bar">
+                        <span style="--width: 85%;"></span>
+                    </div>
+                </li>
+                <li>
+                    Responsive Design
+                    <div class="progress-bar">
+                        <span style="--width: 80%;"></span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="services">
+            <h2>My Services</h2>
+            <div class="services-container">
+                <div class="service-card">
+                    <h3>Web Development</h3>
+                    <p>I create responsive and dynamic websites using modern frameworks like React.js and Node.js to deliver seamless user experiences.</p>
+                </div>
+                <div class="service-card">
+                    <h3>UI/UX Design</h3>
+                    <p>Designing visually appealing, user-friendly interfaces that ensure intuitive navigation and engagement.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Freelance Projects</h3>
+                    <p>Offering freelance services to build and customize websites tailored to individual client needs.</p>
+                </div>
+            </div>
+        </section>
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <img src="project1.jpg" alt="Project 1 Screenshot">
+                    <h3>Portfolio Website</h3>
+                    <p>A responsive portfolio website built using React.js to showcase skills, projects, and contact information.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+                <div class="project-card">
+                    <img src="project2.jpg" alt="Project 2 Screenshot">
+                    <h3>Task Manager App</h3>
+                    <p>A MERN stack application for managing tasks with real-time updates and multi-user collaboration features.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+                <div class="project-card">
+                    <img src="project3.jpg" alt="Project 3 Screenshot">
+                    <h3>Family Tree Visualizer</h3>
+                    <p>A dynamic family tree application designed to store and display family data interactively mdkhwejfhjhxjhcvh.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out for collaboration or just a friendly chat.</p>
+            <div class="contact-container">
+                <form action="https://formspree.io/f/xrbbnlgw" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 Developed by-Madhu Korada.<br>
+                    Aditya Instiyite Of Technology and Management-22A51A05F5.</p>
+                 
+            </div>
+        </footer>
+        
+
+        <button id="scrollToTopBtn" onclick="scrollToTop()">
+            <i class='bx bx-up-arrow-alt'></i>
+        </button>
+
+        
+        
+    </body>
+</html>

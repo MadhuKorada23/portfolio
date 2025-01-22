@@ -256,4 +256,36 @@ a{
     }
 }
 
- 
+ /* Scroll to Top Button */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #7cf03d;
+    color: #1f242d;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: none; /* Hidden initially */
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #1f242d;
+    color: #7cf03d;
+    transform: scale(1.1);
+}
+
+
+.navbar ul li.active a {
+    color: #7cf03d;  /* Active link color */
+    font-weight: 700;
+}
+
